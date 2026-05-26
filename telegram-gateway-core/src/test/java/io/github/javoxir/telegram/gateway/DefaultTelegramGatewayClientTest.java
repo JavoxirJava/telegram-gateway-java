@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway;
+package io.github.javoxir.telegram.gateway;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;

@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.validation;
+package io.github.javoxir.telegram.gateway.validation;
 
 import io.github.javoxir.telegram.gateway.exception.TelegramGatewayValidationException;
 

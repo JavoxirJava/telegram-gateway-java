@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.exception;
+package io.github.javoxir.telegram.gateway.exception;
 
 public class TelegramGatewayException extends RuntimeException {
 

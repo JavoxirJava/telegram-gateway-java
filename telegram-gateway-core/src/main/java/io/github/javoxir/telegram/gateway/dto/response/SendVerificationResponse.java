@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.dto.response;
+package io.github.javoxir.telegram.gateway.dto.response;
 
 import io.github.javoxir.telegram.gateway.dto.result.SendVerificationResult;
 import io.github.javoxir.telegram.gateway.model.DeliveryStatus;

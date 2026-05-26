@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.model;
+package io.github.javoxir.telegram.gateway.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;

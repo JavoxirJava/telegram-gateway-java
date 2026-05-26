@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway;
+package io.github.javoxir.telegram.gateway;
 
 import io.github.javoxir.telegram.gateway.dto.request.CheckSendAbilityRequest;
 import io.github.javoxir.telegram.gateway.dto.request.CheckVerificationStatusRequest;

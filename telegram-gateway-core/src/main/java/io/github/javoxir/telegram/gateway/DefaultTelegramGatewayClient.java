@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway;
+package io.github.javoxir.telegram.gateway;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

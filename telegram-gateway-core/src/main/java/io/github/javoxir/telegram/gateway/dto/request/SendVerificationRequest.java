@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.dto.request;
+package io.github.javoxir.telegram.gateway.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

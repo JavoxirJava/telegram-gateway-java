@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.spring;
+package io.github.javoxir.telegram.gateway.spring;
 
 import io.github.javoxir.telegram.gateway.TelegramGatewayClient;
 import io.github.javoxir.telegram.gateway.TelegramGatewaySignatureVerifier;

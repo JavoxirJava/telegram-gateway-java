@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.dto.response;
+package io.github.javoxir.telegram.gateway.dto.response;
 
 public abstract class TelegramGatewayResponse<T> {
 

@@ -1,4 +1,4 @@
-﻿package io.github.javoxir.telegram.gateway.spring;
+package io.github.javoxir.telegram.gateway.spring;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
