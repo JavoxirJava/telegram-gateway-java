@@ -1,0 +1,8 @@
+﻿/target/
+**/target/
+/.idea/
+*.iml
+*.log
+.DS_Store
+prompt.md
+test.txt
