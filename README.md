@@ -1,4 +1,6 @@
-﻿# telegram-gateway-java
+# telegram-gateway-java
+
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.javoxirjava/telegram-gateway-spring-boot-starter.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.javoxirjava/telegram-gateway-spring-boot-starter/1.0.0/jar)
 
 Production-ready Java SDK for **Telegram Gateway API** (phone verification / OTP), with:
 - `telegram-gateway-core` for plain Java usage
@@ -18,26 +20,18 @@ Supported methods:
 Base URL:
 - `https://gatewayapi.telegram.org`
 
-## Installation
+## Installation (Maven Central)
+This library is available from Maven Central.
 
-### JitPack repository
-
-```xml
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
-```
+No JitPack repository is required anymore.
 
 ### Maven dependency: core module
 
 ```xml
 <dependency>
-  <groupId>com.github.JavoxirJava.telegram-gateway-java</groupId>
+  <groupId>io.github.javoxirjava</groupId>
   <artifactId>telegram-gateway-core</artifactId>
-  <version>${telegram.gateway.version}</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
@@ -45,13 +39,13 @@ Base URL:
 
 ```xml
 <dependency>
-  <groupId>com.github.JavoxirJava.telegram-gateway-java</groupId>
+  <groupId>io.github.javoxirjava</groupId>
   <artifactId>telegram-gateway-spring-boot-starter</artifactId>
-  <version>${telegram.gateway.version}</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
-## Spring Boot usage
+## Quick usage (Spring Boot)
 
 `application.yml`
 
@@ -95,7 +89,7 @@ public class AuthVerificationService {
         return response.getRequestId();
     }
 
-    public boolean verify(String requestId, String code) {
+    public boolean isVerified(String requestId, String code) {
         CheckVerificationStatusResponse response = telegramGatewayClient.checkVerificationStatus(
             CheckVerificationStatusRequest.builder()
                 .requestId(requestId)
@@ -118,45 +112,17 @@ import io.github.javoxir.telegram.gateway.dto.request.SendVerificationRequest;
 
 TelegramGatewayConfig config = TelegramGatewayConfig.builder()
     .token(System.getenv("TELEGRAM_GATEWAY_TOKEN"))
-    .baseUrl("https://gatewayapi.telegram.org")
     .build();
 
 TelegramGatewayClient client = new DefaultTelegramGatewayClient(config);
 
-var response = client.sendVerificationMessage(
+client.sendVerificationMessage(
     SendVerificationRequest.builder()
         .phoneNumber("+998901234567")
         .codeLength(6)
         .ttl(300)
         .build()
 );
-```
-
-## Send verification example
-
-```java
-var response = client.sendVerificationMessage(
-    SendVerificationRequest.builder()
-        .phoneNumber("+998901234567")
-        .requestId("req-123")
-        .payload("signup-flow")
-        .build()
-);
-```
-
-## Check verification example
-
-```java
-var status = client.checkVerificationStatus(
-    CheckVerificationStatusRequest.builder()
-        .requestId("req-123")
-        .code("123456")
-        .build()
-);
-
-if (status.isVerified()) {
-    // verified
-}
 ```
 
 ## Callback signature verification example
