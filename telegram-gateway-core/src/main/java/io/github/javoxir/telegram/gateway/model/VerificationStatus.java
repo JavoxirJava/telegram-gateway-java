@@ -2,6 +2,7 @@ package io.github.javoxir.telegram.gateway.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.Arrays;
 
@@ -19,6 +20,29 @@ public enum VerificationStatus {
     }
 
     @JsonCreator
+    public static VerificationStatus fromValue(JsonNode node) {
+        if (node == null || node.isNull()) {
+            return UNKNOWN;
+        }
+
+        String value = null;
+        if (node.isTextual()) {
+            value = node.asText();
+        } else if (node.isObject()) {
+            JsonNode statusNode = node.get("status");
+            if (statusNode != null && statusNode.isTextual()) {
+                value = statusNode.asText();
+            } else {
+                JsonNode valueNode = node.get("value");
+                if (valueNode != null && valueNode.isTextual()) {
+                    value = valueNode.asText();
+                }
+            }
+        }
+
+        return fromValue(value);
+    }
+
     public static VerificationStatus fromValue(String value) {
         if (value == null) {
             return UNKNOWN;
