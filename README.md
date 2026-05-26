@@ -20,13 +20,24 @@ Base URL:
 
 ## Installation
 
+### JitPack repository
+
+```xml
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+```
+
 ### Maven dependency: core module
 
 ```xml
 <dependency>
-  <groupId>io.github.javoxir</groupId>
+  <groupId>com.github.JavoxirJava.telegram-gateway-java</groupId>
   <artifactId>telegram-gateway-core</artifactId>
-  <version>${telegram-gateway.version}</version>
+  <version>${telegram.gateway.version}</version>
 </dependency>
 ```
 
@@ -34,9 +45,9 @@ Base URL:
 
 ```xml
 <dependency>
-  <groupId>io.github.javoxir</groupId>
+  <groupId>com.github.JavoxirJava.telegram-gateway-java</groupId>
   <artifactId>telegram-gateway-spring-boot-starter</artifactId>
-  <version>${telegram-gateway.version}</version>
+  <version>${telegram.gateway.version}</version>
 </dependency>
 ```
 
